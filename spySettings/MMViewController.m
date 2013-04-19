@@ -7,10 +7,10 @@
 //
 
 #import "MMViewController.h"
-
+#import "MMDetailViewController.h"
 @interface MMViewController ()
 {
-
+    MMDetailViewController *myDetailViewController;
 }
 @property (nonatomic,retain) NSDictionary *tableContents;
 @property (nonatomic,retain) NSArray *sortedKeys;
@@ -24,6 +24,7 @@
 {
     [super viewDidLoad];
     
+    self.title = @"Spy Settings";
     
     NSArray *weapons = [[NSArray alloc]initWithObjects:@"Laser",@"Oil Slick",@"Crazy Monkey With A Gun", nil];
     NSArray *bluetooth = [[NSArray alloc]initWithObjects:@"Pair",@"UnPair",@"Blow Up", nil];
@@ -80,6 +81,7 @@
 	}
 	//4. change the textLabel to reflect the data we are using.
     NSArray *sectionItems =[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]];
+    
 	currentCell.textLabel.text = [sectionItems objectAtIndex:[indexPath row]];
 	return currentCell;
 }
@@ -88,15 +90,18 @@
 {
     
     
-    NSLog(@"%@", [[tableContents valueForKey:[sortedKeys objectAtIndex:indexPath.section]]objectAtIndex:indexPath.row]);
     
-    UIAlertView *newAwesomeAlert = [[UIAlertView alloc]initWithTitle:[sortedKeys objectAtIndex:indexPath.section]
-                                                             message:[[tableContents valueForKey:[sortedKeys objectAtIndex:indexPath.section]]objectAtIndex:indexPath.row]
-                                                            delegate:nil
-                                                   cancelButtonTitle:@"Dismiss"
-                                                   otherButtonTitles:nil, nil];
-    [newAwesomeAlert show];
+    myDetailViewController = [[MMDetailViewController alloc]initWithNibName:nil bundle:nil];
+    myDetailViewController.groupString = [sortedKeys objectAtIndex:[indexPath section]];
+    
+    myDetailViewController.detailString = [[self.tableContents objectForKey:[self.sortedKeys objectAtIndex:[indexPath section]]] objectAtIndex:[indexPath row]];
+    
+    [self.navigationController pushViewController:myDetailViewController animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    NSLog(@"%@", myDetailViewController.groupString);
+    //[self.navigationController pushViewController:myDetailViewController animated:YES];
 
 }
 

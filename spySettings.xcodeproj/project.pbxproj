@@ -19,6 +19,8 @@
 		79EBFF3116CC33FA0061DB09 /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EBFF3016CC33FA0061DB09 /* MMViewController.m */; };
 		79EBFF3416CC33FA0061DB09 /* MMViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79EBFF3216CC33FA0061DB09 /* MMViewController_iPhone.xib */; };
 		79EBFF3716CC33FA0061DB09 /* MMViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79EBFF3516CC33FA0061DB09 /* MMViewController_iPad.xib */; };
+		B489352616CD5ACD00744432 /* MMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B489352416CD5ACD00744432 /* MMDetailViewController.m */; };
+		B489352716CD5ACD00744432 /* MMDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B489352516CD5ACD00744432 /* MMDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		79EBFF3016CC33FA0061DB09 /* MMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMViewController.m; sourceTree = "<group>"; };
 		79EBFF3316CC33FA0061DB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MMViewController_iPhone.xib; sourceTree = "<group>"; };
 		79EBFF3616CC33FA0061DB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MMViewController_iPad.xib; sourceTree = "<group>"; };
+		B489352316CD5ACD00744432 /* MMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDetailViewController.h; sourceTree = "<group>"; };
+		B489352416CD5ACD00744432 /* MMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDetailViewController.m; sourceTree = "<group>"; };
+		B489352516CD5ACD00744432 /* MMDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MMDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				79EBFF2716CC33FA0061DB09 /* MMAppDelegate.m */,
 				79EBFF2F16CC33FA0061DB09 /* MMViewController.h */,
 				79EBFF3016CC33FA0061DB09 /* MMViewController.m */,
+				B489352316CD5ACD00744432 /* MMDetailViewController.h */,
+				B489352416CD5ACD00744432 /* MMDetailViewController.m */,
+				B489352516CD5ACD00744432 /* MMDetailViewController.xib */,
 				79EBFF3216CC33FA0061DB09 /* MMViewController_iPhone.xib */,
 				79EBFF3516CC33FA0061DB09 /* MMViewController_iPad.xib */,
 				79EBFF1E16CC33FA0061DB09 /* Supporting Files */,
@@ -168,6 +176,7 @@
 				79EBFF2E16CC33FA0061DB09 /* Default-568h@2x.png in Resources */,
 				79EBFF3416CC33FA0061DB09 /* MMViewController_iPhone.xib in Resources */,
 				79EBFF3716CC33FA0061DB09 /* MMViewController_iPad.xib in Resources */,
+				B489352716CD5ACD00744432 /* MMDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +190,7 @@
 				79EBFF2416CC33FA0061DB09 /* main.m in Sources */,
 				79EBFF2816CC33FA0061DB09 /* MMAppDelegate.m in Sources */,
 				79EBFF3116CC33FA0061DB09 /* MMViewController.m in Sources */,
+				B489352616CD5ACD00744432 /* MMDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,14 +14,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UINavigationController *myNavController;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[MMViewController alloc] initWithNibName:@"MMViewController_iPhone" bundle:nil];
     } else {
         self.viewController = [[MMViewController alloc] initWithNibName:@"MMViewController_iPad" bundle:nil];
+        myNavController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
     }
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = myNavController;
     [self.window makeKeyAndVisible];
     return YES;
 }
